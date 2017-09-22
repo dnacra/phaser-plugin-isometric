@@ -60,7 +60,8 @@ declare module Phaser.Plugin {
             static multiply(a: Phaser.Plugin.Isometric.Point3, b: Phaser.Plugin.Isometric.Point3, out?: Phaser.Plugin.Isometric.Point3): Phaser.Plugin.Isometric.Point3;
             static divide(a: Phaser.Plugin.Isometric.Point3, b: Phaser.Plugin.Isometric.Point3, out?: Phaser.Plugin.Isometric.Point3): Phaser.Plugin.Isometric.Point3;
             static equals(a: Phaser.Plugin.Isometric.Point3, b: Phaser.Plugin.Isometric.Point3): boolean;
-
+            static containsXY(a: Phaser.Plugin.Isometric.Cube, x: number, y: number): boolean;
+            
             x: number;
             y: number;
             z: number;
@@ -76,6 +77,7 @@ declare module Phaser.Plugin {
             subtract(x?: number, y?: number, z?: number): Phaser.Plugin.Isometric.Point3;
             multiply(x?: number, y?: number, z?: number): Phaser.Plugin.Isometric.Point3;
             divide(x?: number, y?: number, z?: number): Phaser.Plugin.Isometric.Point3;
+            containsXY(x: number, y: number): boolean;
 
         }
 
