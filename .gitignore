@@ -1,3 +1,12 @@
+# IDEs and editors #
+####################
+/.idea
+.settings/
+*.vscode
+*.idea
+*.ipr
+*.iml
+
 # Compiled source #
 ###################
 *.com

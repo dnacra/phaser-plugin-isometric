@@ -1,12 +1,22 @@
 //debug octreee is missing - Octree 
 //debug isoSprite is missing - IsoSprite
-//gameobjectcreator isoSprite missing - IsoSprite
-//gameobjectfactory isoSprite missing - IsoSprite
 //debug body missing - Body
 //debug bodyInfo missing -Body
 declare module Phaser {
+    interface Game {
+        iso: Phaser.Plugin.Isometric.Projector;
+    }
+
     interface Physics {
         isoArcade:Phaser.Plugin.Isometric.Arcade;
+    }
+
+    interface GameObjectFactory {
+        isoSprite(x: number, y: number, z: number, key?: any, frame?: any, group?: Phaser.Group): Phaser.Plugin.Isometric.IsoSprite;
+    }
+
+    interface GameObjectCreator {
+        isoSprite(x: number, y: number, z: number, key?: any, frame?: any, group?: Phaser.Group): Phaser.Plugin.Isometric.IsoSprite;
     }
 }
 
