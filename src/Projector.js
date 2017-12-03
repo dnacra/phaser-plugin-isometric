@@ -47,6 +47,7 @@ Phaser.Plugin.Isometric.Projector = function (game, projectionAngle) {
 Phaser.Plugin.Isometric.CLASSIC = Math.atan(0.5);
 Phaser.Plugin.Isometric.ISOMETRIC = Math.PI / 6;
 Phaser.Plugin.Isometric.MILITARY = Math.PI / 4;
+Phaser.Plugin.Isometric.PASCAL = Math.atan(0.75);
 
 Phaser.Plugin.Isometric.Projector.prototype = {
 

@@ -1578,10 +1578,12 @@ Phaser.Plugin.Isometric.Point3.prototype = {
      * @param {number} z - The value to add to Point3.z.
      * @return {Phaser.Plugin.Isometric.Point3} This Point3 object. Useful for chaining method calls.
      */
-    add: function (x, y) {
+    add: function (x, y, z) {
 
         this.x += x || 0;
         this.y += y || 0;
+        this.z += z || 0;
+
         return this;
 
     },
@@ -1800,6 +1802,7 @@ Phaser.Plugin.Isometric.Projector = function (game, projectionAngle) {
 Phaser.Plugin.Isometric.CLASSIC = Math.atan(0.5);
 Phaser.Plugin.Isometric.ISOMETRIC = Math.PI / 6;
 Phaser.Plugin.Isometric.MILITARY = Math.PI / 4;
+Phaser.Plugin.Isometric.PASCAL = Math.atan(0.75);
 
 Phaser.Plugin.Isometric.Projector.prototype = {
 
@@ -2455,7 +2458,7 @@ Phaser.Plugin.Isometric.Body.prototype = {
 
         this.blocked.up = false;
         this.blocked.down = false;
-        this.blocked.backX = false;
+        this.blocked.frontY = false;
         this.blocked.frontX = false;
         this.blocked.backY = false;
         this.blocked.backX = false;
@@ -2670,7 +2673,7 @@ Phaser.Plugin.Isometric.Body.prototype = {
      * @param {number} height - The height of the Body.
      * @param {number} [offsetX] - The X offset of the Body from the Sprite position.
      * @param {number} [offsetY] - The Y offset of the Body from the Sprite position.
-     * @param {number} [offsetY] - The Z offset of the Body from the Sprite position.
+     * @param {number} [offsetZ] - The Z offset of the Body from the Sprite position.
      */
     setSize: function (widthX, widthY, height, offsetX, offsetY, offsetZ) {
 
