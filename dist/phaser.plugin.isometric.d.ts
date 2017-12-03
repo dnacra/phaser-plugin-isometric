@@ -27,6 +27,7 @@ declare module Phaser.Plugin {
         static CLASSIC: number;
         static ISOMETRIC: number;
         static MILITARY: number;
+        static PASCAL: number;
 
         static VERSION: string;
         static UP: number;
