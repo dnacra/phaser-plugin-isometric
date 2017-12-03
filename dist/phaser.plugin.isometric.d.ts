@@ -41,7 +41,7 @@ declare module Phaser.Plugin {
 
         projector: Phaser.Plugin.Isometric.Projector;
 
-        constructor(game: Phaser.Game, parent?: any);
+        constructor(game: Phaser.Game, parent?: any, isometricType?: number);
 
         addIsoSprite(x: number, y: number, z: number, key?: any, frame?: any, group?: Phaser.Group): Phaser.Plugin.Isometric.IsoSprite;
 
